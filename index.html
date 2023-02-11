@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-
-<head>
-	<meta charset="UTF-8">
-	<title>azhong的博客</title>
-	<style type="text/css">
-	h1{
-		text-align:center;
-		font-size:50px;
-	}
-	</style>
-</head>
-<body>
-	<h1>Hello Wrord,Thanks and Enjoy Github</h1>
-	<!--img decoding="async" src="images/IMG_0557.JPG" alt="Smiley face" width="42" height="42"-->
-</body>
-</html>
+---
+layout:default
+title:My Blog
+---
+<h2>文章列表</h2>
+<ul>
+\{\% for post in site.posts %}
+<li>&#123;{post.date|date:"%Y-%m-%d"}}<a href="&#123;{post.title}}</a></li>
+&#123;% endfor%}
+</ul>
